@@ -44,7 +44,9 @@ int main() {
     while(1) {
         int n;
         cin >> n;
-        if (n == 0) break;
+        if (n == 0) {
+            break;
+        }
         checkGoldbach(n);
     }
 }

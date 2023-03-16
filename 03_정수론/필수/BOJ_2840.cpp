@@ -6,7 +6,7 @@ using namespace std;
 
 //n과 k를 받고 바퀴의 알파벳이 들어있는 벡터를 리턴하는 함수
 vector<char> checkWheel(int n, int k) {
-    vector<char> answer (n, ' ');
+    vector<char> answer (n, '?');
     vector<pair<char, int>> input(k - 1); //첫 줄의 숫자를 버리고 k-1번만큼 (알파벳, 숫자를) 입력받기 위해 크기를 k-1로.
     set<char> occupied; //이미 바퀴에 들어있는 알파벳을 저장하는 set
     int idx = 0, t; 
@@ -55,9 +55,6 @@ int main() {
             cout << '!';
             break;
             // ! == 바퀴 존재 불가, 따라서 ! 출력 후 프로그램 종료.
-        }
-        else if (c == ' ') {
-            cout << '?';
         }
         else {
             cout << c;
